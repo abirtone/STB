@@ -23,3 +23,10 @@ Install STL is so easy:
 ```bash
 # git clone https://github.com/abirtone/stl.git
 ```
+
+Usage
+-----
+
+Now you only need to looking for "# TODO" text to find values to change and adapt the template to your own project.
+
+
