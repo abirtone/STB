@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 #
-# %{TOOL_NAME}s
+# %{TOOL_NAME}s  # TODO
 #
 # Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
 # following conditions are met:
@@ -29,19 +29,19 @@ from setuptools import setup, find_packages
 files = ["resources/*"]
 
 setup(
-    name='%{TOOL_NAME}s',
-    version='%{TOOL_VERSION}s',
+    name='%{TOOL_NAME}s',  # TODO
+    version='%{TOOL_VERSION}s',  # TODO
     packages=find_packages(),
     install_requires=["termcolor==1.1.0", "six"],
-    url='%{PROJECT_URL}s',
+    url='%{PROJECT_URL}s',  # TODO
     license='BSD',
-    author='%{AUTHOR}s',
-    author_email='%{AUTHOR_MAIL}s',
+    author='%{AUTHOR}s',  # TODO
+    author_email='%{AUTHOR_MAIL}s',  # TODO
     package_data={'security_template_lib': files},
     entry_points={'console_scripts': [
         'tool_template = security_template_lib.stp:main',
         ]},
-    description='%{TOOL_DESCRIPTION}s',
+    description='%{TOOL_DESCRIPTION}s',  # TODO
     classifiers=[
         'Environment :: Console',
         'Intended Audience :: System Administrators',
@@ -50,7 +50,7 @@ setup(
         'Operating System :: MacOS',
         'Operating System :: Microsoft :: Windows',
         'Operating System :: POSIX',
-        'Programming Language :: Python :: %{PYTHON_VERSION}s',
+        'Programming Language :: Python :: %{PYTHON_VERSION}s',  # TODO
         'Topic :: Security',
         ]
 )

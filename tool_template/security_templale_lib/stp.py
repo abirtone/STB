@@ -17,9 +17,9 @@ Examples:
 
     * Scan target using default 50 most common plugins:
         %{tool_name}s TARGET
-    '''
+    '''  # TODO
 
-    parser = argparse.ArgumentParser(description='%{TOOL_NAME}s', epilog=examples,
+    parser = argparse.ArgumentParser(description='%{TOOL_NAME}s', epilog=examples,  # TODO
                                      formatter_class=argparse.RawTextHelpFormatter)
 
     # Main options
@@ -47,7 +47,8 @@ if __name__ == "__main__" and __package__ is None:
     import os
     parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     sys.path.insert(1, parent_dir)
-    __package__ = str("security_templale_lib")
+    import security_template_lib  # TODO
+    __package__ = str("security_templale_lib")  # TODO
 
     # Check Python version
     # if sys.version_info < (3, 3):

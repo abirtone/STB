@@ -8,12 +8,13 @@ This file contains main data structures of proyect
 
 import six
 
+
 # --------------------------------------------------------------------------
 class GlobalParameters:
     """Global parameters of proyect"""
 
     # ----------------------------------------------------------------------
-    def __init__(self, from_argparse=None, **kwargs):
+    def __init__(self, from_argparse=None, **kwargs):  # TODO
         """
         Setup parameters from argparser of option by option
         """

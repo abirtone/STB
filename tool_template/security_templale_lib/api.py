@@ -1,4 +1,3 @@
-#!/usr/bin/python
 # -*- coding: utf-8 -*-
 
 """
@@ -32,3 +31,5 @@ def run_console(config):
     # --------------------------------------------------------------------------
     # if version_info < (3, 3):
     #     raise RuntimeError("You need Python 3.3.x or higher to run %{TOOL_NAME}s")
+
+    # TODO
