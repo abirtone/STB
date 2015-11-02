@@ -6,14 +6,18 @@
 Security Tools builder
 ======================
 
-![Logo](https://raw.githubusercontent.com/abirtone/STB/master/stb_lib/doc/images/logo.png)
+.. figure:: https://raw.githubusercontent.com/abirtone/STB/master/stb_lib/doc/images/logo.png
+    :align: left
 
 *STB: Security Tools Builder*
 
-Code | https://github.com/abirtone/STB
----- | ----------------------------------------------
-Issues | https://github.com/abirtone/STB/issues
-Python version | Python 2 or 3
+============== =============================================
+Code           https://github.com/abirtone/STB
+============== =============================================
+Issues         https://github.com/abirtone/STB/issues
+Python version Python 2 & 3 & Pypy
+============== =============================================
+
 
 What's STB
 ----------
@@ -72,7 +76,7 @@ Author
 
 Abirtone - Ideas and technology for the real world.
 
-`http://abirtone.com`_
+http://abirtone.com
 
 Suggestions and support
 -----------------------

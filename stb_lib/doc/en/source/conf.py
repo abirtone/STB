@@ -46,8 +46,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'%{TOOL_NAME}s'  # TODO
-copyright = u'%{RELEASE_DATE}s, %{AUTHR}s'  # TODO
+project = u'STB - Security Tool Builder'
+copyright = u'2015, Abirtone'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
