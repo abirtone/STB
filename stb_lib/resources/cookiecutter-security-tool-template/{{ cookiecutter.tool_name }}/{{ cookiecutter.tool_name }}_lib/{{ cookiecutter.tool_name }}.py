@@ -1,4 +1,3 @@
-#!/usr/bin/python
 # -*- coding: utf-8 -*-
 
 import argparse
@@ -16,10 +15,10 @@ def main():
 Examples:
 
     * Scan target using default 50 most common plugins:
-        %{tool_name}s TARGET
-    '''  # TODO
+        %(tool_name)s TARGET
+    '''  % dict(tool_name="{{ cookiecutter.tool_name|lower|replace(" ", "_") }}")
 
-    parser = argparse.ArgumentParser(description='%{TOOL_NAME}s', epilog=examples,  # TODO
+    parser = argparse.ArgumentParser(description='%s security tool' % "{{ cookiecutter.tool_name }}".capitalize(), epilog=examples,
                                      formatter_class=argparse.RawTextHelpFormatter)
 
     # Main options
@@ -28,14 +27,18 @@ Examples:
 
     parsed_args = parser.parse_args()
 
+    # Configure global log
+    log.setLevel(abs(5 - parsed_args.verbose) % 5)
+
+    # Set Global Config
     config = GlobalParameters(parsed_args)
 
     try:
         run_console(config)
     except KeyboardInterrupt:
-        log("[*] Exiting ...\n")
+        log.warning("[*] CTRL+C caught. Exiting...")
     except Exception as e:
-        pass
+        log.info("[!] Unhandled exception: %s" % str(e))
 
 if __name__ == "__main__" and __package__ is None:
     # --------------------------------------------------------------------------
@@ -47,13 +50,21 @@ if __name__ == "__main__" and __package__ is None:
     import os
     parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     sys.path.insert(1, parent_dir)
-    import security_template_lib  # TODO
-    __package__ = str("security_templale_lib")  # TODO
+    import {{ cookiecutter.tool_name|lower| replace(" ", "_") }}_lib
+    __package__ = str("{{ cookiecutter.tool_name }}_lib")
 
-    # Check Python version
-    # if sys.version_info < (3, 3):
-    #     print("\n[!] You need a Python version greater than 3.3\n")
-    #     exit(1)
+    {%- if cookiecutter.python_version_3 != cookiecutter.python_version_2 %}
+    # Checks Python version
+    {%- if cookiecutter.python_version_3 %}
+    {%- set run_python_version = 3 %}
+    {%- else %}
+    {%- set run_python_version = 2 %}
+    {%- endif %}
+    if sys.version_info < {{ run_python_version }}:
+        print("\n[!] You need a Python version greater than {{ run_python_version }}.x\n")
+        exit(1)
+    {%- endif %}
+
     del sys, os
 
     main()

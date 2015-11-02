@@ -1,20 +1,21 @@
-#!/usr/bin/python
 # -*- coding: utf-8 -*-
 
 
 """
-This file contains main data structures of proyect
+This file contains main data structures of project
 """
 
 import six
 
+from os.path import abspath, dirname
+
 
 # --------------------------------------------------------------------------
 class GlobalParameters:
-    """Global parameters of proyect"""
+    """Global parameters of project"""
 
     # ----------------------------------------------------------------------
-    def __init__(self, from_argparse=None, **kwargs):  # TODO
+    def __init__(self, from_argparse=None, **kwargs):
         """
         Setup parameters from argparser of option by option
         """
@@ -25,3 +26,6 @@ class GlobalParameters:
             if isinstance(from_argparse, Namespace):
                 for p_name, p_value in six.iteritems(vars(from_argparse)):
                     setattr(self, p_name, p_value)
+
+        # Fix output dir
+        self.output = abspath(dirname(self.output))

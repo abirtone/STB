@@ -1,0 +1,17 @@
+Version {{ cookiecutter.project_version }}
+========{% for x in range((cookiecutter.project_version|length)) %}={% endfor %}
+
+Internal modifications
+----------------------
+
+- First release.
+
+Improvements and fixes
+----------------------
+
+- First release.
+
+New features
+------------
+
+- First release.

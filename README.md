@@ -1,32 +1,78 @@
-Security Template Lib
-=====================
+Security Tools builder
+======================
 
+![Logo](https://raw.githubusercontent.com/abirtone/STB/master/stb_lib/doc/images/logo.png)
 
-*STL: Security Template Library Project*
+*STB: Security Tools Builder*
 
-Code | https://github.com/abirtone/stl
+Code | https://github.com/abirtone/STB
 ---- | ----------------------------------------------
-Issues | https://github.com/abirtone/stl/issues
+Issues | https://github.com/abirtone/STB/issues
 Python version | Python 2 or 3
 
-What's STL
+What's STB
 ----------
 
-STL is a project template for build security tools easilly. 
+This project help you to create the skell for a hacking tool.
 
+STB uses the OMSTD methodology concepts to build a reusable application.
 
 Installation
 ------------
 
-Install STL is so easy:
+Install STB is so easy:
 
 ```bash
-# git clone https://github.com/abirtone/stl.git
+# pip install stb
 ```
 
 Usage
 -----
 
-Now you only need to looking for "# TODO" text to find values to change and adapt the template to your own project.
+STB has a wizard to help you to use it. You only need to write the launch command:
+
+```bash
+# stb
+   _____ _______ ____
+  / ____|__   __|  _ \
+ | (___    | |  | |_) |
+  \___ \   | |  |  _ <
+  ____) |  | |  | |_) |
+ |_____/   |_|  |____/
+
+ Security Tool Builder
+
+[*] Requesting queries needed to build project:
+    <i> Tool name: My Tool
+    <i> Brief description: Sample hacking tool
+    <i> Long description: Long description for my new tool ... blah ... blah
+    <i> Tool author: Abirtone
+    <i> Author email: opensource@abirtone.com
+    <i> Project site URL: https://github.com/abirtone/my_tool
+    <i> Project version (1.0.0):
+    <i> Tool will support Python 2?: y
+    <i> Tool will support Python 3?: y
+[*] Building project
+[*] Done!
+```
 
 
+Licence
+-------
+
+This project is licensed as BSD license.
+
+Author
+------
+
+Abirtone - Ideas and technology for the real world: http://abirtone.com
+
+Suggestions and support
+-----------------------
+
+If you found any issue or have suggestion, write us to: opensource[-at-]abirtone.com
+
+Commercial support
+------------------
+
+For commercial support and advisement, you can contact us at: advisement-opensource[-at-]abirtone.com

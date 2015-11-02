@@ -1,0 +1,11 @@
+{
+  "tool_name": "sample",
+  "brief_description": "Brief description",
+  "long_description": "Long description",
+  "author": "Author Name",
+  "author_mail": "author@mail.com",
+  "project_site": "http://sample.com",
+  "project_version": "1.0.0",
+  "python_version_3": false,
+  "python_version_2": true
+}

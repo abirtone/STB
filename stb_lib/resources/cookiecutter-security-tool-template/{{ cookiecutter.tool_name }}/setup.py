@@ -1,7 +1,6 @@
-#!/usr/bin/python
 # -*- coding: utf-8 -*-
 #
-# %{TOOL_NAME}s  # TODO
+# {{ cookiecutter.tool_name }}
 #
 # Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
 # following conditions are met:
@@ -24,24 +23,29 @@
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
+from os.path import dirname, join
 from setuptools import setup, find_packages
 
-files = ["resources/*"]
+# Import requirements
+with open(join(dirname(__file__), 'requirements.txt')) as f:
+    required = f.read().splitlines()
+
 
 setup(
-    name='%{TOOL_NAME}s',  # TODO
-    version='%{TOOL_VERSION}s',  # TODO
-    packages=find_packages(),
-    install_requires=["termcolor==1.1.0", "six"],
-    url='%{PROJECT_URL}s',  # TODO
+    name='{{ cookiecutter.tool_name|lower| replace(" ", "_")  }}',
+    version='1.0.0',
+    install_requires=required,
+    url='{{ cookiecutter.project_site }}',
     license='BSD',
-    author='%{AUTHOR}s',  # TODO
-    author_email='%{AUTHOR_MAIL}s',  # TODO
-    package_data={'security_template_lib': files},
+    author='{{ cookiecutter.author }}',
+    author_email='{{ cookiecutter.author_mail }}',
+    packages=find_packages(),
+    include_package_data=True,
     entry_points={'console_scripts': [
-        'tool_template = security_template_lib.stp:main',
+        '{{ cookiecutter.tool_name|lower|replace(" ", "_") }} = {{ cookiecutter.tool_name|lower|replace(" ", "_") }}_lib.{{ cookiecutter.tool_name|lower|replace(" ", "_") }}:main',
         ]},
-    description='%{TOOL_DESCRIPTION}s',  # TODO
+    description='{{ cookiecutter.brief_description }}',
+    long_description=open('README.md', "r").read(),
     classifiers=[
         'Environment :: Console',
         'Intended Audience :: System Administrators',
@@ -50,7 +54,8 @@ setup(
         'Operating System :: MacOS',
         'Operating System :: Microsoft :: Windows',
         'Operating System :: POSIX',
-        'Programming Language :: Python :: %{PYTHON_VERSION}s',  # TODO
+        {% if cookiecutter.python_version_2 %}'Programming Language :: Python :: 2'{% endif %},
+        {% if cookiecutter.python_version_3 %}'Programming Language :: Python :: 3'{% endif %},
         'Topic :: Security',
         ]
 )

@@ -1,0 +1,50 @@
+#
+# Question format:
+#
+#VAR_NAME:
+#  type: int|str|bool
+#  mandatory: true|false
+#  default: "some value"
+#  label: "Label to display"
+
+tool_name:
+  type: str
+  mandatory: true
+  label: "Tool name"
+
+brief_description:
+  type: str
+  mandatory: true
+  label: "Brief description"
+
+long_description:
+  type: str
+  label: "Long description"
+
+author:
+  type: str
+  mandatory: true
+  label: "Tool author"
+
+author_mail:
+  type: str
+  mantory: true
+  label: "Author email"
+
+project_site:
+  type: str
+  mantory: true
+  label: "Project site URL"
+
+project_version:
+  type: str
+  label: "Project version"
+  default: "1.0.0"
+
+python_version_2:
+  type: bool
+  label: "Tool will support Python 2?"
+
+python_version_3:
+  type: bool
+  label: "Tool will support Python 3?"
