@@ -3,12 +3,12 @@ Security Tools builder
 
 ![Logo](https://raw.githubusercontent.com/abirtone/STB/master/stb_lib/doc/images/logo.png)
 
-*STB: Security Tools Builder*
+**STB: Security Tools Builder**
 
 Code | https://github.com/abirtone/STB
 ---- | ----------------------------------------------
 Issues | https://github.com/abirtone/STB/issues
-Python version | Python 2 or 3
+Python version | Python 2 & 3 & Pypy
 
 What's STB
 ----------
