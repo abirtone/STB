@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-import six
 import yaml
+import six.moves
 import collections
 
 from os.path import abspath, dirname, join
@@ -72,12 +72,12 @@ def do_wizard():
 
         # Ask
         while 1:
-            _tmp_res = raw_input(msg)
+            _tmp_res = six.moves.input(msg)
 
             # Empty answer allowed?
             if not _tmp_res:
                 if mandatory:
-                    raw_input("    %s %s" % (colored("<!>", "red"), "This question is mandatory."))
+                    six.moves.input("    %s %s" % (colored("<!>", "red"), "This question is mandatory."))
                     continue
 
                 if default:
@@ -90,11 +90,11 @@ def do_wizard():
                 try:
                     _tmp_res = int(_tmp_res)
                 except ValueError:
-                    raw_input("    %s %s" % (colored("<!>", "red"), "This question must be answered with a number."))
+                    six.moves.input("    %s %s" % (colored("<!>", "red"), "This question must be answered with a number."))
                     continue
             elif prop_type == "bool":
                 if _tmp_res not in ("yes", "y", "no", "n"):
-                    raw_input("    %s %s" % (colored("<!>", "red"),
+                    six.moves.input("    %s %s" % (colored("<!>", "red"),
                                              "This question must be answered with 'yes/no' or 'y/n'."))
                     continue
             elif prop_type == "str":

@@ -24,7 +24,8 @@ Examples:
 
     # Main options
     parser.add_argument("target", metavar="TARGET", nargs="*")
-    parser.add_argument("-v", "--verbosity", dest="verbose", action="count", help="verbosity level: -v, -vv, -vvv.", default=0)
+    parser.add_argument("-v", "--verbosity", dest="verbose", action="count", help="verbosity level: -v, -vv, -vvv.",
+                        default=1)
 
     parsed_args = parser.parse_args()
 
@@ -39,7 +40,7 @@ Examples:
     except KeyboardInterrupt:
         log.warning("[*] CTRL+C caught. Exiting...")
     except Exception as e:
-        log.info("[!] Unhandled exception: %s" % str(e))
+        log.critical("[!] Unhandled exception: %s" % str(e))
 
 if __name__ == "__main__" and __package__ is None:
     # --------------------------------------------------------------------------
