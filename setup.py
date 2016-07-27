@@ -34,7 +34,7 @@ with open(join(dirname(__file__), 'requirements.txt')) as f:
 
 setup(
     name='stb',
-    version='1.0.2',
+    version='1.0.3',
     install_requires=required,
     url='https://github.com/abirtone/stb',
     license='BSD',
