@@ -7,5 +7,6 @@
   "project_site": "http://sample.com",
   "project_version": "1.0.0",
   "python_version_3": false,
-  "python_version_2": true
+  "python_version_2": true,
+  "today_year": ""
 }

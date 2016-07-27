@@ -18,8 +18,8 @@ def build_project(config, responses):
     # Add datetime
     responses["today_year"] = datetime.now().strftime("%Y")
 
-    path = join(abspath(dirname(__file__)), "..", "resources/cookiecutter-security-tool-template")
-
+    path = abspath(join(abspath(dirname(__file__)), "..", "resources/cookiecutter-security-tool-template"))
+    
     cookiecutter(path,
                  extra_context=responses,
                  no_input=True)

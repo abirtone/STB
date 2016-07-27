@@ -67,3 +67,4 @@ pyvenv.cfg
 pip-selfcheck.json
 
 # Created by .ignore support plugin (hsz.mobi)
+.idea/

@@ -9,18 +9,17 @@
 Code | {{ cookiecutter.project_site }}
 ---- | ----------------------------------------------
 Issues | {{ cookiecutter.project_site }}/issues/
-{%- if cookiecutter.python_version_3 != cookiecutter.python_version_2 %}
-    {%- if cookiecutter.python_version_3 %}
-        {%- set run_python_version_3 = "3" %}
-    {%- endif %}
-    {%- if cookiecutter.python_version_2 %}
-        {%- if cookiecutter.python_version_2 %}
-            {%- set run_python_version_sep = " & " %}
-        {%- else%}
-            {%- set run_python_version_sep = "" %}
-        {%- endif %}
-        {%- set run_python_version_2 = "2" %}
-    {%- endif %}
+{%- if cookiecutter.python_version_3 %}
+    {%- set run_python_version_3 = "3" %}
+{%- endif %}
+{%- if cookiecutter.python_version_2 %}
+    {%- set run_python_version_2 = "2" %}
+{%- endif %}
+
+{%- if cookiecutter.python_version_3 == "3" and cookiecutter.python_version_2 == "2" %}
+    {%- set run_python_version_sep = " & " %}
+{%- else %}
+    {%- set run_python_version_sep = "" %}
 {%- endif %}
 Python version | Python {{ run_python_version_3 }}{{ run_python_version_sep }}{{ run_python_version_2 }}
 
