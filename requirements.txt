@@ -1,4 +1,4 @@
 six
-pyyaml
+pyyaml==5.4.1
 termcolor
 cookiecutter
